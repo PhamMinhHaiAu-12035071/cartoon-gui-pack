@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242 210" width="242" height="210">
+	<title>Arrow Simple - Down</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Arrow Simple - Down">
+		<path id="Path" class="shp0" d="M240.8 36.48C248.42 70.55 166.94 209.63 118.02 209.63C69.87 209.63 -15.51 72.94 3.38 29.23C22.27 -14.48 231.37 -5.71 240.8 36.48Z" />
+	</g>
+</svg>

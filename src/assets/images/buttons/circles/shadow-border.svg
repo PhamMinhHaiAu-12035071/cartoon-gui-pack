@@ -1,0 +1,19 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" width="62" height="62">
+	<title>Home Scene</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M1040.05 132L-879.95 132L-879.95 -948L1040.05 -948L1040.05 132Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill-opacity: 0.38;fill: #4d6376 } 
+	</style>
+	<g id="Home Scene" clip-path="url(#cp1)">
+		<g id="Main Buttons">
+			<g id="Layer 68">
+				<path id="Circle Cartoon" class="shp0" d="M0.8 31.5C0.8 15.13 12.76 0.66 29.34 0.66C45.92 0.66 61.41 16.41 61.51 33.87C61.63 53.38 46.26 61.37 29.68 61.37C13.1 61.37 0.8 47.87 0.8 31.5Z" />
+			</g>
+		</g>
+	</g>
+</svg>

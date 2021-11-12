@@ -1,0 +1,33 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<title>Bordeaux</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="127.999" y1="-0.626" x2="127.999" y2="256.626">
+			<stop offset="0" stop-color="#a31750"  />
+			<stop offset="1" stop-color="#a31750"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="203.873" y1="26.471" x2="44.322" y2="220.169">
+			<stop offset="0" stop-color="#df376a"  />
+			<stop offset="1" stop-color="#d22959"  />
+		</linearGradient>
+		<linearGradient id="grd3" gradientUnits="userSpaceOnUse"  x1="191.356" y1="34.961" x2="52.155" y2="203.788">
+			<stop offset="0" stop-color="#c2204e"  />
+			<stop offset="1" stop-color="#e44e79"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+		.shp1 { fill: url(#grd2) } 
+		.shp2 { fill: url(#grd3) } 
+		.shp3 { fill: #ffffff } 
+	</style>
+	<g id="Bordeaux">
+		<path id="Ellipse" class="shp0" d="M0 130.05C0 61.03 50.43 0 120.33 0C190.23 0 255.57 66.4 256 140.03C256.48 222.32 191.66 256 121.77 256C51.87 256 0 199.08 0 130.05Z" />
+		<path id="Ellipse" class="shp1" d="M8.23 128.15C8.23 64.18 55.53 7.62 121.1 7.62C186.67 7.62 247.97 69.16 248.37 137.39C248.82 213.65 188.02 244.86 122.45 244.86C56.88 244.86 8.23 192.11 8.23 128.15Z" />
+		<path id="Ellipse" class="shp2" d="M14.24 124.04C14.24 70.18 55.61 23.1 119.83 22.55C181.16 22.03 238.5 74.36 238.88 131.82C239.3 196.03 187.92 227.61 121.09 222.32C59.94 217.47 14.24 177.9 14.24 124.04Z" />
+		<g id="Layer 8">
+			<path id="Layer 6" class="shp3" d="M189.53 37.32C201.75 46.37 214.15 59.84 211.62 63.25C209.09 66.66 192.6 58.72 180.38 49.67C168.17 40.62 164.83 33.86 167.35 30.45C169.88 27.04 177.32 28.27 189.53 37.32Z" />
+			<path id="Layer 7" class="shp3" d="M67.76 201.05C70.74 202.71 72.29 205.62 71.22 207.55C70.14 209.48 66.85 209.69 63.87 208.03C60.89 206.37 59.34 203.46 60.41 201.53C61.49 199.6 64.78 199.39 67.76 201.05Z" />
+		</g>
+	</g>
+</svg>

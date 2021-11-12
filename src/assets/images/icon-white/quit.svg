@@ -1,0 +1,11 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 228" width="228" height="228">
+	<title>Quit</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width: 37 } 
+	</style>
+	<g id="Quit">
+		<path id="Layer 2" class="shp0" d="M184.63 49.66C199.92 66.56 209.24 88.96 209.24 113.53C209.24 166.09 166.57 208.77 114 208.77C61.43 208.77 18.76 166.09 18.76 113.53C18.76 88.96 28.08 66.56 43.37 49.66" />
+		<path id="Layer 3" class="shp0" d="M114 18.73L114 80.59" />
+	</g>
+</svg>

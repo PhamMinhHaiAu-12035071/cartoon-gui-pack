@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 200" width="248" height="200">
+	<title>Heart</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Heart">
+		<path id="Ellipse" class="shp0" d="M0.08 70.56C0.08 9.66 74.15 -34.17 124 35.47C182.25 -33.07 247.92 11.63 247.92 71.66C247.92 135.16 180.08 200.12 123.86 200.12C67.64 200.12 0.08 135.16 0.08 70.56Z" />
+	</g>
+</svg>

@@ -1,0 +1,24 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<title>Light</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="206.505" y1="31.605" x2="50.658" y2="219.285">
+			<stop offset="0" stop-color="#ffffff"  />
+			<stop offset="1" stop-color="#ced4da"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="202.69" y1="42.029" x2="48.401" y2="198.652">
+			<stop offset="0" stop-color="#ced4da"  />
+			<stop offset="1" stop-color="#ffffff"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #61809b } 
+		.shp1 { fill: url(#grd1) } 
+		.shp2 { opacity: 0.498;fill: url(#grd2) } 
+	</style>
+	<g id="Light">
+		<path id="Ellipse" class="shp0" d="M0 130.05C0 61.03 50.43 0 120.33 0C190.23 0 255.57 66.4 256 140.03C256.48 222.32 191.66 256 121.77 256C51.87 256 0 199.08 0 130.05Z" />
+		<path id="Ellipse" class="shp1" d="M10.88 128.11C10.88 65.55 57.14 10.24 121.26 10.24C185.39 10.24 245.33 70.42 245.72 137.15C246.16 211.72 186.71 242.25 122.58 242.25C58.46 242.25 10.88 190.66 10.88 128.11Z" />
+		<path id="Ellipse" class="shp2" d="M16.76 124.08C16.76 71.41 57.21 25.37 120.02 24.84C180 24.33 236.07 75.51 236.44 131.7C236.85 194.49 186.61 225.37 121.25 220.2C61.45 215.46 16.76 176.76 16.76 124.08Z" />
+	</g>
+</svg>

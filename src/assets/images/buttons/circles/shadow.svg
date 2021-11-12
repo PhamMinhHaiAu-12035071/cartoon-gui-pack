@@ -1,0 +1,19 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 131" width="131" height="131">
+	<title>Home Scene</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M1331.05 250L-588.95 250L-588.95 -830L1331.05 -830L1331.05 250Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill-opacity: 0.2;fill: #0a3a6a } 
+	</style>
+	<g id="Home Scene" clip-path="url(#cp1)">
+		<g id="Main Buttons">
+			<g id="Pink">
+				<path id="Ellipse" class="shp0" d="M0.69 66.43C0.69 31.38 26.3 0.39 61.8 0.39C97.29 0.39 130.47 34.1 130.69 71.49C130.94 113.28 98.02 130.39 62.53 130.39C27.03 130.39 0.69 101.48 0.69 66.43Z" />
+			</g>
+		</g>
+	</g>
+</svg>

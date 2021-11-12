@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142 230" width="142" height="230">
+	<title>Arrow - Right (Line)</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width: 53.621 } 
+	</style>
+	<path id="Arrow - Right (Line)" class="shp0" d="M27.56 27.19L115.06 114.69L26.94 202.81" />
+</svg>

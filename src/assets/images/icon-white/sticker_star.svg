@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 238" width="232" height="238">
+	<title>Sticker Star</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<path id="Sticker Star" class="shp0" d="M116 0.83L139.64 15.42L167.27 12.53L182.24 35.94L208.39 45.32L211.72 72.9L231.21 92.7L222.24 119L231.21 145.3L211.72 165.1L208.39 192.68L182.24 202.06L167.27 225.47L139.64 222.58L116 237.17L92.36 222.58L64.73 225.47L49.76 202.06L23.61 192.68L20.28 165.1L0.79 145.3L9.76 119L0.79 92.7L20.28 72.9L23.61 45.32L49.76 35.94L64.73 12.53L92.36 15.42L116 0.83Z" />
+</svg>

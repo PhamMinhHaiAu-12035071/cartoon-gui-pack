@@ -1,0 +1,11 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 162" width="240" height="162">
+	<title>Forward</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Forward">
+		<path id="Path" class="shp0" d="M137.85 160.74C115.21 151.07 115.14 114.4 112.19 80.76C109.23 47.11 109.32 -0.24 128.57 0.28C157.03 1.05 240.27 64.21 239.81 91.59C239.51 109.86 155.3 168.19 137.85 160.74Z" />
+		<path id="Path" class="shp0" d="M27.25 161.07C4.62 151.4 4.55 114.73 1.6 81.08C-1.36 47.43 -1.27 0.09 17.98 0.61C46.44 1.38 129.68 64.54 129.22 91.92C128.92 110.19 44.71 168.52 27.25 161.07Z" />
+	</g>
+</svg>

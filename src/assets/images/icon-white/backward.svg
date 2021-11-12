@@ -1,0 +1,11 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 154" width="228" height="154">
+	<title>Backward</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Backward">
+		<path id="Path" class="shp0" d="M0.05 87.07C-0.38 61.03 78.79 0.97 105.85 0.23C124.15 -0.27 124.24 44.77 121.43 76.77C118.62 108.77 118.56 143.64 97.03 152.84C80.42 159.92 0.34 104.45 0.05 87.07Z" />
+		<path id="Path" class="shp0" d="M105.23 87.38C104.79 61.35 183.96 1.28 211.02 0.55C229.33 0.05 229.42 45.08 226.61 77.08C223.8 109.08 223.73 143.95 202.2 153.15C185.6 160.24 105.52 104.76 105.23 87.38Z" />
+	</g>
+</svg>

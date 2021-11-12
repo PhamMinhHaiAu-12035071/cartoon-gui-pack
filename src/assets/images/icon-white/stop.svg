@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242 242" width="242" height="242">
+	<title>Stop</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Stop">
+		<path id="Path" class="shp0" d="M46.41 0.69L195.59 0.69C220.84 0.69 241.31 21.16 241.31 46.41L241.31 195.59C241.31 220.84 220.84 241.31 195.59 241.31L46.41 241.31C21.16 241.31 0.69 220.84 0.69 195.59L0.69 46.41C0.69 21.16 21.16 0.69 46.41 0.69Z" />
+	</g>
+</svg>

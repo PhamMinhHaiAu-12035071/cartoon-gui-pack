@@ -1,23 +1,23 @@
 <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-	<title>Pink</title>
+	<title>Yellow</title>
 	<defs>
-		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="187.055" y1="35.989" x2="62.501" y2="222.882">
-			<stop offset="0" stop-color="#f783ac"  />
-			<stop offset="1" stop-color="#e64980"  />
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="183.774" y1="32.154" x2="66.476" y2="223.303">
+			<stop offset="0" stop-color="#ffe066"  />
+			<stop offset="1" stop-color="#e67700"  />
 		</linearGradient>
-		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="180.493" y1="43.144" x2="65.897" y2="202.968">
-			<stop offset="0" stop-color="#f06595"  />
-			<stop offset="1" stop-color="#f783ac" stop-opacity="0.68" />
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="179.083" y1="43.266" x2="70.954" y2="203.56">
+			<stop offset="0" stop-color="#fab005"  />
+			<stop offset="1" stop-color="#f59f00"  />
 		</linearGradient>
 	</defs>
 	<style>
 		tspan { white-space:pre }
-		.shp0 { fill: #a92d52 } 
+		.shp0 { fill: #a0611e } 
 		.shp1 { fill: url(#grd1) } 
 		.shp2 { fill: url(#grd2) } 
 		.shp3 { fill: #ffffff } 
 	</style>
-	<g id="Pink">
+	<g id="Yellow">
 		<path id="Ellipse" class="shp0" d="M0 130.05C0 61.03 50.43 0 120.33 0C190.23 0 255.57 66.4 256 140.03C256.48 222.32 191.66 256 121.77 256C51.87 256 0 199.08 0 130.05Z" />
 		<path id="Ellipse" class="shp1" d="M8.23 128.15C8.23 64.19 55.54 7.63 121.1 7.63C186.67 7.63 247.96 69.16 248.37 137.39C248.82 213.64 188.02 244.86 122.45 244.86C56.89 244.86 8.23 192.11 8.23 128.15Z" />
 		<path id="Ellipse" class="shp2" d="M14.24 124.04C14.24 70.18 55.61 23.1 119.83 22.55C181.16 22.03 238.5 74.37 238.87 131.82C239.3 196.03 187.92 227.6 121.09 222.31C59.95 217.47 14.24 177.89 14.24 124.04Z" />
