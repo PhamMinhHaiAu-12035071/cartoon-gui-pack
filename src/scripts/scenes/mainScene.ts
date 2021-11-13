@@ -1,7 +1,5 @@
 import { CircleButton, HomeSceneImage, IconWhite } from '../../types/shared-typed'
-import CircleButtonComponent from '../components/circleButtonComponent'
 import Phaser from 'phaser'
-import { getSize } from '../../utils'
 import ListCircleButtonComponent from '../components/listCircleButtonComponent'
 
 export default class MainScene extends Phaser.Scene {
@@ -14,8 +12,7 @@ export default class MainScene extends Phaser.Scene {
 
   create() {
     this._createBackgroundImage()
-    this._createCircleComponent(400, 400, CircleButton.PINK, IconWhite.USER, CircleButton.PURPLE_BORDER, 9)
-    this._listCircleButtonComponent = new ListCircleButtonComponent(this)
+    this._createListCircleButton()
   }
 
   private _createBackgroundImage() {
@@ -30,24 +27,49 @@ export default class MainScene extends Phaser.Scene {
     this._backgroundGameImage.setScale(scale).setScrollFactor(0)
   }
 
-  private _createCircleComponent(
-    x: number,
-    y: number,
-    circleButton: CircleButton,
-    icon: IconWhite,
-    circleBadge?: CircleButton,
-    badge?: number
-  ) {
-    const container = new CircleButtonComponent(this, x, y)
-    container.setCircleWrapper(circleButton)
-    container.setIcon(icon)
-    if (circleBadge && badge) {
-      container.setBorderCircle(circleBadge)
-      container.setBadge(badge)
-      const { w, h } = getSize(container.componentBorderCircle, this.game)
-      container.componentBorderCircle.setSize(w, h)
-      container.runAnimationComponentBorderCircle()
-    }
+  private _createListCircleButton() {
+    const OFFSET_ORIGINAL: number = this.cameras.main.width * 0.33
+    const OFFSET_TOP_VERTICAL: number = this.cameras.main.height * 0.78
+    const OFFSET_BOTTOM_VERTICAL: number = this.cameras.main.height * 0.88
+    this._listCircleButtonComponent = new ListCircleButtonComponent(this)
+    this._listCircleButtonComponent.add([
+      {
+        game: this.game,
+        x: OFFSET_ORIGINAL,
+        y: OFFSET_TOP_VERTICAL,
+        circleButton: CircleButton.PINK,
+        scaleCircleButton: 0.35,
+        icon: IconWhite.USER
+      },
+      {
+        game: this.game,
+        x: OFFSET_ORIGINAL + 150,
+        y: OFFSET_BOTTOM_VERTICAL,
+        circleButton: CircleButton.YELLOW,
+        scaleCircleButton: 0.35,
+        icon: IconWhite.HEART,
+        circleBadge: CircleButton.BLUE_BORDER,
+        badge: 4
+      },
+      {
+        game: this.game,
+        x: OFFSET_ORIGINAL + 150 * 2,
+        y: OFFSET_BOTTOM_VERTICAL,
+        circleButton: CircleButton.ORANGE,
+        scaleCircleButton: 0.35,
+        icon: IconWhite.CHAT,
+        circleBadge: CircleButton.PURPLE_BORDER,
+        badge: 5
+      },
+      {
+        game: this.game,
+        x: OFFSET_ORIGINAL + 150 * 3,
+        y: OFFSET_TOP_VERTICAL,
+        circleButton: CircleButton.PURPLE,
+        scaleCircleButton: 0.35,
+        icon: IconWhite.SETTINGS
+      }
+    ])
   }
 
   update(time: number, delta: number) {}

@@ -23,8 +23,8 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     this._circle.on('pointerout', this.pointerOut.bind(this))
   }
 
-  setCircleWrapper(texture: CircleButton): Phaser.GameObjects.Image {
-    this._circle = this._scene.add.image(0, 0, texture).setInteractive({ cursor: 'pointer' }).setScale(0.5)
+  setCircleWrapper(texture: CircleButton, scale: number = 1): Phaser.GameObjects.Image {
+    this._circle = this._scene.add.image(0, 0, texture).setInteractive({ cursor: 'pointer' }).setScale(scale)
     this._setShadowCircleWrapper()
     this.add(this._circle)
     this.createEvent()

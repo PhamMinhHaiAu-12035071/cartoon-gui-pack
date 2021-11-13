@@ -14,9 +14,10 @@ export enum CircleButton {
   TEAL = 'teal-circle-button',
   VIOLET = 'violet-circle-button',
   YELLOW = 'yellow-circle-button',
-  PURPLE_BORDER = 'purple-circle-border-button',
   SHADOW = 'shadow-circle-button',
-  SHADOW_BORDER = 'shadow-border-circle-button'
+  SHADOW_BORDER = 'shadow-border-circle-button',
+  BLUE_BORDER = 'blue-circle-border-button',
+  PURPLE_BORDER = 'purple-circle-border-button'
 }
 
 export enum HomeSceneImage {
@@ -104,6 +105,7 @@ export interface ICircleButton {
   x: number
   y: number
   circleButton: CircleButton
+  scaleCircleButton?: number
   icon: IconWhite
   circleBadge?: CircleButton
   badge?: number

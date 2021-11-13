@@ -3,7 +3,7 @@ import CircleButtonComponent from './circleButtonComponent'
 import { getSize, isICircleButton } from '../../utils'
 
 export default class ListCircleButtonComponent extends Phaser.GameObjects.Group {
-  private _scene: Phaser.Scene
+  private readonly _scene: Phaser.Scene
   constructor(
     scene: Phaser.Scene,
     children?: Phaser.GameObjects.GameObject[] | Phaser.Types.GameObjects.Group.GroupConfig,
@@ -13,10 +13,13 @@ export default class ListCircleButtonComponent extends Phaser.GameObjects.Group 
     this._scene = scene
   }
 
-  override add(data: any, _scene: any): any {
-    if (isICircleButton(data)) {
-      // handle
-    }
+  override add(data: any, _scene?: any): any {
+    const arr = []
+    arr.concat(data).forEach(child => {
+      if (isICircleButton(child)) {
+        this.add(this._createCircleComponent(child))
+      }
+    })
   }
 
   private _createCircleComponent({
@@ -24,12 +27,13 @@ export default class ListCircleButtonComponent extends Phaser.GameObjects.Group 
     x,
     y,
     circleButton,
+    scaleCircleButton,
     circleBadge,
     icon,
     badge
   }: ICircleButton): CircleButtonComponent {
     const container = new CircleButtonComponent(this._scene, x, y)
-    container.setCircleWrapper(circleButton)
+    container.setCircleWrapper(circleButton, scaleCircleButton)
     container.setIcon(icon)
     if (circleBadge && badge) {
       container.setBorderCircle(circleBadge)
