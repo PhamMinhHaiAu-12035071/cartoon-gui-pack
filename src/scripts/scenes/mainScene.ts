@@ -28,45 +28,46 @@ export default class MainScene extends Phaser.Scene {
   }
 
   private _createListCircleButton() {
-    const OFFSET_ORIGINAL: number = this.cameras.main.width * 0.33
     const OFFSET_TOP_VERTICAL: number = this.cameras.main.height * 0.78
     const OFFSET_BOTTOM_VERTICAL: number = this.cameras.main.height * 0.88
+    const SCALE: number = 0.35
+    const sizeCircleButton: number = ListCircleButtonComponent.RADIUS_ORIGINAL_CIRCLE * SCALE
     this._listCircleButtonComponent = new ListCircleButtonComponent(this)
     this._listCircleButtonComponent.add([
       {
         game: this.game,
-        x: OFFSET_ORIGINAL,
+        x: this.cameras.main.width * 0.5 - sizeCircleButton * 2.75,
         y: OFFSET_TOP_VERTICAL,
         circleButton: CircleButton.PINK,
-        scaleCircleButton: 0.35,
+        scaleCircleButton: SCALE,
         icon: IconWhite.USER
       },
       {
         game: this.game,
-        x: OFFSET_ORIGINAL + 150,
+        x: this.cameras.main.width * 0.5 - sizeCircleButton,
         y: OFFSET_BOTTOM_VERTICAL,
         circleButton: CircleButton.YELLOW,
-        scaleCircleButton: 0.35,
+        scaleCircleButton: SCALE,
         icon: IconWhite.HEART,
         circleBadge: CircleButton.BLUE_BORDER,
         badge: 4
       },
       {
         game: this.game,
-        x: OFFSET_ORIGINAL + 150 * 2,
+        x: this.cameras.main.width * 0.5 + sizeCircleButton,
         y: OFFSET_BOTTOM_VERTICAL,
         circleButton: CircleButton.ORANGE,
-        scaleCircleButton: 0.35,
+        scaleCircleButton: SCALE,
         icon: IconWhite.CHAT,
         circleBadge: CircleButton.PURPLE_BORDER,
         badge: 5
       },
       {
         game: this.game,
-        x: OFFSET_ORIGINAL + 150 * 3,
+        x: this.cameras.main.width * 0.5 + sizeCircleButton * 2.75,
         y: OFFSET_TOP_VERTICAL,
         circleButton: CircleButton.PURPLE,
-        scaleCircleButton: 0.35,
+        scaleCircleButton: SCALE,
         icon: IconWhite.SETTINGS
       }
     ])

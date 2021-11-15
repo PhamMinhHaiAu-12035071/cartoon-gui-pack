@@ -1,6 +1,17 @@
 import { CircleButton, IconWhite } from '../../types/shared-typed'
 import * as Phaser from 'phaser'
 
+export interface ICircleButton {
+  game: Phaser.Game
+  x: number
+  y: number
+  circleButton: CircleButton
+  scaleCircleButton?: number
+  icon: IconWhite
+  circleBadge?: CircleButton
+  badge?: number
+}
+
 export default class CircleButtonComponent extends Phaser.GameObjects.Container {
   private readonly _scene: Phaser.Scene
   private _circle: Phaser.GameObjects.Image
@@ -10,10 +21,13 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
   private _borderCircle: Phaser.GameObjects.Image
   private _shadowBorderCircle: Phaser.GameObjects.Image
   private _textBadge: Phaser.GameObjects.Text
+
+  private _isPointOver: boolean
   public static readonly SCALE_ANIMATION: number = 0.18
   constructor(scene: Phaser.Scene, x?: number, y?: number, children?: Array<Phaser.GameObjects.GameObject>) {
     super(scene, x, y, children)
     this._scene = scene
+    this._isPointOver = false
     // add container into scene
     scene.add.existing(this)
   }
@@ -21,6 +35,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
   createEvent() {
     this._circle.on('pointerover', this.pointerOver.bind(this))
     this._circle.on('pointerout', this.pointerOut.bind(this))
+    this._circle.on('pointerdown', this.pointerDown.bind(this))
   }
 
   setCircleWrapper(texture: CircleButton, scale: number = 1): Phaser.GameObjects.Image {
@@ -123,10 +138,11 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     const minSizeBorderCircle: number = Math.min(
       ...[this._borderCircle.width * this._borderCircle.scaleX, this._borderCircle.height * this._borderCircle.scaleY]
     )
-    const FONT_SIZE: number = minSizeBorderCircle * 0.4
+    const FONT_SIZE: number = minSizeBorderCircle * 0.5
     const style = { font: `${FONT_SIZE}px LilitaOne`, fill: '#ffffff', boundsAlignH: 'center', boundsAlignV: 'middle' }
     this._textBadge = this._scene.add.text(0, 0, badge.toString(), style)
     this._textBadge.setOrigin(0.5, 0.5)
+    this._textBadge.setResolution(2)
     const offsetX: number =
       this._circle.width * this._circle.scaleX * 0.5 - this._borderCircle.width * this._borderCircle.scaleX * 0.2
     const offsetY: number = this._borderCircle.height * this._borderCircle.scaleY * 0.5
@@ -140,7 +156,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     const scaleX: number = 0.12
     const { width, height } = this._componentBorderCircle
     const offsetY: number = height * scaleY * 0.5
-    const offsetX: number = width * scaleX * 0.5
+    const offsetX: number = width * scaleX * 0.52
     const timeDuration: number = 650
     const config = {
       duration: timeDuration,
@@ -200,19 +216,25 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
    * handle when hover
    */
   pointerOver(): void {
+    this._isPointOver = true
     this._scene.tweens.add({
       targets: this,
-      scaleY: 1 + CircleButtonComponent.SCALE_ANIMATION,
-      duration: 100,
-      repeat: 0,
-      yoyo: false
-    })
-    this._scene.tweens.add({
-      targets: this,
-      scaleX: 1 + CircleButtonComponent.SCALE_ANIMATION,
-      duration: 1000,
-      ease: 'Elastic.easeOut',
-      easeParams: [1.5, 0.5]
+      props: {
+        scaleY: {
+          value: 1 + CircleButtonComponent.SCALE_ANIMATION,
+          duration: 100,
+          repeat: 0,
+          yoyo: false
+        },
+        scaleX: {
+          value: 1 + CircleButtonComponent.SCALE_ANIMATION,
+          duration: 1000,
+          ease: 'Elastic.easeOut',
+          easeParams: [1.5, 0.5],
+          repeat: 0,
+          yoyo: false
+        }
+      }
     })
   }
 
@@ -222,17 +244,48 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
   pointerOut(): void {
     this._scene.tweens.add({
       targets: this,
-      scaleY: 1,
-      duration: 100,
+      props: {
+        scaleY: {
+          value: 1,
+          duration: 100,
+          repeat: 0,
+          yoyo: false
+        },
+        scaleX: {
+          value: 1,
+          duration: 1000,
+          ease: 'Elastic.easeOut',
+          easeParams: [1.5, 0.5],
+          repeat: 0,
+          yoyo: false
+        }
+      }
+    })
+    this._isPointOver = false
+  }
+
+  /**
+   * handle when clicked
+   */
+  pointerDown(): void {
+    this._scene.tweens.add({
+      targets: this,
+      scaleY: 1 + CircleButtonComponent.SCALE_ANIMATION - 0.25,
+      scaleX: 1 + CircleButtonComponent.SCALE_ANIMATION + 0.1,
+      duration: 350,
       repeat: 0,
       yoyo: false
     })
     this._scene.tweens.add({
       targets: this,
-      scaleX: 1,
-      duration: 1000,
+      scaleY: 1 + CircleButtonComponent.SCALE_ANIMATION,
+      scaleX: 1 + CircleButtonComponent.SCALE_ANIMATION,
+      delay: 350,
+      duration: 950,
+      repeat: 0,
+      yoyo: false,
       ease: 'Elastic.easeOut',
-      easeParams: [1.5, 0.5]
+      easeParams: [3.5, 0.65]
     })
   }
 }

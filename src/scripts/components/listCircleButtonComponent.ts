@@ -1,8 +1,8 @@
-import { ICircleButton } from '../../types/shared-typed'
-import CircleButtonComponent from './circleButtonComponent'
+import CircleButtonComponent, { ICircleButton } from './circleButtonComponent'
 import { getSize, isICircleButton } from '../../utils'
 
 export default class ListCircleButtonComponent extends Phaser.GameObjects.Group {
+  public static readonly RADIUS_ORIGINAL_CIRCLE = 256
   private readonly _scene: Phaser.Scene
   constructor(
     scene: Phaser.Scene,
@@ -15,11 +15,14 @@ export default class ListCircleButtonComponent extends Phaser.GameObjects.Group 
 
   override add(data: any, _scene?: any): any {
     const arr = []
-    arr.concat(data).forEach(child => {
-      if (isICircleButton(child)) {
-        this.add(this._createCircleComponent(child))
-      }
-    })
+    const arrCircleButton = arr.concat(data).filter(item => isICircleButton(item))
+    const size = arrCircleButton.length
+    if (size > 0) {
+      arrCircleButton.forEach((child, index) => {
+        const itemCircleButton = child as ICircleButton
+        this.add(this._createCircleComponent(itemCircleButton))
+      })
+    }
   }
 
   private _createCircleComponent({

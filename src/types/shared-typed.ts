@@ -99,14 +99,3 @@ export enum IconWhite {
   X_ICON_ROUNDED = 'x-icon-rounded-white-icon',
   YOUTUBE = 'youtube-white-icon'
 }
-
-export interface ICircleButton {
-  game: Phaser.Game
-  x: number
-  y: number
-  circleButton: CircleButton
-  scaleCircleButton?: number
-  icon: IconWhite
-  circleBadge?: CircleButton
-  badge?: number
-}

@@ -1,5 +1,5 @@
 import Phaser from 'phaser'
-import { ICircleButton } from '../types/shared-typed'
+import { ICircleButton } from '../scripts/components/circleButtonComponent'
 
 export const getSize = (con: Phaser.GameObjects.Container, game: Phaser.Game): { w: number; h: number } => {
   //set the top position to the bottom of the game
