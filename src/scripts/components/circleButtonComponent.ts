@@ -1,14 +1,14 @@
-import { CircleButton, IconWhite } from '../../types/shared-typed'
+import { CircleButtonSvg, IconWhiteSvg } from '../../types/shared-typed'
 import * as Phaser from 'phaser'
 
 export interface ICircleButton {
   game: Phaser.Game
   x: number
   y: number
-  circleButton: CircleButton
+  circleButton: CircleButtonSvg
   scaleCircleButton?: number
-  icon: IconWhite
-  circleBadge?: CircleButton
+  icon: IconWhiteSvg
+  circleBadge?: CircleButtonSvg
   badge?: number
 }
 
@@ -22,27 +22,25 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
   private _shadowBorderCircle: Phaser.GameObjects.Image
   private _textBadge: Phaser.GameObjects.Text
 
-  private _isPointOver: boolean
   public static readonly SCALE_ANIMATION: number = 0.18
   constructor(scene: Phaser.Scene, x?: number, y?: number, children?: Array<Phaser.GameObjects.GameObject>) {
     super(scene, x, y, children)
     this._scene = scene
-    this._isPointOver = false
     // add container into scene
     scene.add.existing(this)
   }
 
-  createEvent() {
-    this._circle.on('pointerover', this.pointerOver.bind(this))
-    this._circle.on('pointerout', this.pointerOut.bind(this))
-    this._circle.on('pointerdown', this.pointerDown.bind(this))
+  private _createEvent() {
+    this._circle.on('pointerover', this._pointerOver.bind(this))
+    this._circle.on('pointerout', this._pointerOut.bind(this))
+    this._circle.on('pointerdown', this._pointerDown.bind(this))
   }
 
-  setCircleWrapper(texture: CircleButton, scale: number = 1): Phaser.GameObjects.Image {
+  setCircleWrapper(texture: CircleButtonSvg, scale: number = 1): Phaser.GameObjects.Image {
     this._circle = this._scene.add.image(0, 0, texture).setInteractive({ cursor: 'pointer' }).setScale(scale)
     this._setShadowCircleWrapper()
     this.add(this._circle)
-    this.createEvent()
+    this._createEvent()
     return this._circle
   }
 
@@ -69,14 +67,14 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     const OFFSET: number = 0.05
     const offsetX: number = this._circle.width * this._circle.scaleX * OFFSET
     const offsetY: number = this._circle.height * this._circle.scaleY * OFFSET
-    this._shadowCircle = this._scene.add.image(-offsetX, offsetY, CircleButton.SHADOW)
+    this._shadowCircle = this._scene.add.image(-offsetX, offsetY, CircleButtonSvg.SHADOW)
     const { x, y } = this._getScaleBasedOnImage(this._shadowCircle, this._circle)
     this._shadowCircle.setScale(x, y)
     this.add(this._shadowCircle)
     return this._shadowCircle
   }
 
-  setIcon(texture: IconWhite, scaleComparedToCircle: number = 0.4): Phaser.GameObjects.Image {
+  setIcon(texture: IconWhiteSvg, scaleComparedToCircle: number = 0.4): Phaser.GameObjects.Image {
     if (!this._circle) {
       throw new Error('please provide circle image wrapper')
     }
@@ -96,7 +94,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     return this._icon
   }
 
-  setBorderCircle(texture: CircleButton, scaleComparedToCircle = 0.4): Phaser.GameObjects.Image {
+  setBorderCircle(texture: CircleButtonSvg, scaleComparedToCircle = 0.4): Phaser.GameObjects.Image {
     if (!this._circle) {
       throw new Error('please provide circle image wrapper')
     }
@@ -117,7 +115,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
 
   private _setShadowBorderCircle(scaleComparedToCircle: number): Phaser.GameObjects.Image {
     const OFFSET: number = 0.14
-    this._shadowBorderCircle = this._scene.add.image(0, 0, CircleButton.SHADOW_BORDER)
+    this._shadowBorderCircle = this._scene.add.image(0, 0, CircleButtonSvg.SHADOW_BORDER)
     const { x, y } = this._getScaleBasedOnImage(this._shadowBorderCircle, this._circle, scaleComparedToCircle)
     this._shadowBorderCircle.setScale(x, y)
     this._shadowBorderCircle.setOrigin(0.5, 0)
@@ -215,8 +213,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
   /**
    * handle when hover
    */
-  pointerOver(): void {
-    this._isPointOver = true
+  private _pointerOver(): void {
     this._scene.tweens.add({
       targets: this,
       props: {
@@ -241,7 +238,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
   /**
    * handle when hover out
    */
-  pointerOut(): void {
+  private _pointerOut(): void {
     this._scene.tweens.add({
       targets: this,
       props: {
@@ -261,13 +258,12 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
         }
       }
     })
-    this._isPointOver = false
   }
 
   /**
    * handle when clicked
    */
-  pointerDown(): void {
+  private _pointerDown(): void {
     this._scene.tweens.add({
       targets: this,
       scaleY: 1 + CircleButtonComponent.SCALE_ANIMATION - 0.25,

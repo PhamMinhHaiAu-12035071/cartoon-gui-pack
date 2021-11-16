@@ -1,4 +1,4 @@
-export enum CircleButton {
+export enum CircleButtonSvg {
   BLUE = 'blue-circle-button',
   BORDEAUX = 'bordeaux-circle-button',
   BROWN = 'brown-circle-button',
@@ -24,7 +24,7 @@ export enum HomeSceneImage {
   BACKGROUND = 'home-scene-background'
 }
 
-export enum IconWhite {
+export enum IconWhiteSvg {
   ALERT = 'alert-white-icon',
   ALERT_BELL = 'alert-bell-white-icon',
   ARROW_DOWN = 'arrow-down-white-icon',
@@ -98,4 +98,24 @@ export enum IconWhite {
   X_ICON = 'x-icon-white-icon',
   X_ICON_ROUNDED = 'x-icon-rounded-white-icon',
   YOUTUBE = 'youtube-white-icon'
+}
+
+export enum SquareButton {
+  BLUE = 'blue-square-button',
+  BLUE_TEAL = 'blue-teal-square-button',
+  BORDEAUX = 'bordeaux-square-button',
+  BROWN = 'brown-square-button',
+  DARK = 'dark-square-button',
+  GRAY = 'gray-square-button',
+  GRAY_BLUE = 'gray-blue-square-button',
+  GREEN = 'green-square-button',
+  LIGHT = 'light-square-button',
+  NEUTRAL = 'neutral-square-button',
+  ORANGE = 'orange-square-button',
+  PINK = 'pink-square-button',
+  PURPLE = 'purple-square-button',
+  RED = 'red-square-button',
+  TEAL = 'teal-square-button',
+  VIOLET = 'violet-square-button',
+  YELLOW = 'yellow-square-button'
 }

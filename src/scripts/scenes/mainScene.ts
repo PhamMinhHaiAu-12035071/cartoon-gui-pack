@@ -1,6 +1,7 @@
-import { CircleButton, HomeSceneImage, IconWhite } from '../../types/shared-typed'
+import { CircleButtonSvg, HomeSceneImage, IconWhiteSvg, SquareButton } from '../../types/shared-typed'
 import Phaser from 'phaser'
 import ListCircleButtonComponent from '../components/listCircleButtonComponent'
+import SquareButtonComponent from '../components/squareButtonComponent'
 
 export default class MainScene extends Phaser.Scene {
   private _backgroundGameImage: Phaser.GameObjects.Image
@@ -13,6 +14,7 @@ export default class MainScene extends Phaser.Scene {
   create() {
     this._createBackgroundImage()
     this._createListCircleButton()
+    this._createListSquareButton()
   }
 
   private _createBackgroundImage() {
@@ -38,39 +40,44 @@ export default class MainScene extends Phaser.Scene {
         game: this.game,
         x: this.cameras.main.width * 0.5 - sizeCircleButton * 2.75,
         y: OFFSET_TOP_VERTICAL,
-        circleButton: CircleButton.PINK,
+        circleButton: CircleButtonSvg.PINK,
         scaleCircleButton: SCALE,
-        icon: IconWhite.USER
+        icon: IconWhiteSvg.USER
       },
       {
         game: this.game,
         x: this.cameras.main.width * 0.5 - sizeCircleButton,
         y: OFFSET_BOTTOM_VERTICAL,
-        circleButton: CircleButton.YELLOW,
+        circleButton: CircleButtonSvg.YELLOW,
         scaleCircleButton: SCALE,
-        icon: IconWhite.HEART,
-        circleBadge: CircleButton.BLUE_BORDER,
+        icon: IconWhiteSvg.HEART,
+        circleBadge: CircleButtonSvg.BLUE_BORDER,
         badge: 4
       },
       {
         game: this.game,
         x: this.cameras.main.width * 0.5 + sizeCircleButton,
         y: OFFSET_BOTTOM_VERTICAL,
-        circleButton: CircleButton.ORANGE,
+        circleButton: CircleButtonSvg.ORANGE,
         scaleCircleButton: SCALE,
-        icon: IconWhite.CHAT,
-        circleBadge: CircleButton.PURPLE_BORDER,
+        icon: IconWhiteSvg.CHAT,
+        circleBadge: CircleButtonSvg.PURPLE_BORDER,
         badge: 5
       },
       {
         game: this.game,
         x: this.cameras.main.width * 0.5 + sizeCircleButton * 2.75,
         y: OFFSET_TOP_VERTICAL,
-        circleButton: CircleButton.PURPLE,
+        circleButton: CircleButtonSvg.PURPLE,
         scaleCircleButton: SCALE,
-        icon: IconWhite.SETTINGS
+        icon: IconWhiteSvg.SETTINGS
       }
     ])
+  }
+
+  private _createListSquareButton() {
+    const square = new SquareButtonComponent(this, 200, 300)
+    square.setSquareWrapper(SquareButton.GREEN, 0.35)
   }
 
   update(time: number, delta: number) {}

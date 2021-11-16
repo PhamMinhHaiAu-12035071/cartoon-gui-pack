@@ -1,0 +1,24 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<title>Light</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="206.296" y1="31.616" x2="50.46" y2="222.072">
+			<stop offset="0" stop-color="#ffffff"  />
+			<stop offset="1" stop-color="#ced4da"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="195.398" y1="44.109" x2="56.077" y2="204.004">
+			<stop offset="0" stop-color="#ced4da"  />
+			<stop offset="1" stop-color="#ffffff"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #61809b } 
+		.shp1 { fill: url(#grd1) } 
+		.shp2 { opacity: 0.498;fill: url(#grd2) } 
+	</style>
+	<g id="Light">
+		<path id="Layer 2" class="shp0" d="M128 256C23.32 256 0 210.23 0 128C0 45.77 37.35 0 128 0C218.65 0 256 47.57 256 128C256 208.43 232.68 256 128 256Z" />
+		<path id="Layer 3" class="shp1" d="M128 245.16C63.03 247.88 10.34 225.7 10.18 130.45C10.01 22.67 66.95 9.93 128 9.93C193.02 9.93 249.86 30.26 245.81 130.45C242.03 224.12 209.32 241.74 128 245.16Z" />
+		<path id="Layer 4" class="shp2" d="M126.99 226.57C48.73 226.57 23.41 188.11 23.41 130.69C23.41 52.33 61.12 26.56 128.05 26.56C209.24 26.56 230.05 65.22 230.05 130.6C230.05 188.02 210.48 226.57 126.99 226.57Z" />
+	</g>
+</svg>
