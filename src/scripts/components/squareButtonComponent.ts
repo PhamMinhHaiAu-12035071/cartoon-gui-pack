@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
-import { SquareButton } from '../../types/shared-typed'
+import { SquareButtonSvg } from '../../types/shared-typed'
+import { getScaleBasedOnImage } from '../../utils'
 
 export interface ISquareButton {
   game: Phaser.Game
@@ -12,6 +13,7 @@ export default class SquareButtonComponent extends Phaser.GameObjects.Container 
 
   private _scene: Phaser.Scene
   private _square: Phaser.GameObjects.Image
+  private _shadowSquare: Phaser.GameObjects.Image
 
   constructor(scene: Phaser.Scene, x?: number, y?: number, children?: Array<Phaser.GameObjects.GameObject>) {
     super(scene, x, y, children)
@@ -20,13 +22,24 @@ export default class SquareButtonComponent extends Phaser.GameObjects.Container 
     scene.add.existing(this)
   }
 
-  setSquareWrapper(texture: SquareButton, scale: number = 1): Phaser.GameObjects.Image {
+  setSquareWrapper(texture: SquareButtonSvg, scale: number = 1): Phaser.GameObjects.Image {
     this._square = this._scene.add.image(0, 0, texture).setInteractive({ cursor: 'pointer' })
     this._square.setScale(scale)
     this._square.setInteractive({ cursor: 'pointer' })
+    this._setShadowSquareWrapper()
     this.add(this._square)
     this._createEvent()
     return this._square
+  }
+
+  private _setShadowSquareWrapper(): Phaser.GameObjects.Image {
+    const OFFSET: number = 0.05
+    const offsetY: number = this._square.height * this._square.scaleY * OFFSET
+    this._shadowSquare = this._scene.add.image(0, offsetY, SquareButtonSvg.SHADOW)
+    const { x, y } = getScaleBasedOnImage(this._shadowSquare, this._square)
+    this._shadowSquare.setScale(x, y)
+    this.add(this._shadowSquare)
+    return this._shadowSquare
   }
 
   private _createEvent() {

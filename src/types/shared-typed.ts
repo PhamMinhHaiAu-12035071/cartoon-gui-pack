@@ -100,7 +100,7 @@ export enum IconWhiteSvg {
   YOUTUBE = 'youtube-white-icon'
 }
 
-export enum SquareButton {
+export enum SquareButtonSvg {
   BLUE = 'blue-square-button',
   BLUE_TEAL = 'blue-teal-square-button',
   BORDEAUX = 'bordeaux-square-button',
@@ -117,5 +117,6 @@ export enum SquareButton {
   RED = 'red-square-button',
   TEAL = 'teal-square-button',
   VIOLET = 'violet-square-button',
-  YELLOW = 'yellow-square-button'
+  YELLOW = 'yellow-square-button',
+  SHADOW = 'shadow-square-button'
 }

@@ -1,0 +1,17 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 94" width="95" height="94">
+	<title>Home Scene</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M243.05 988L-1676.95 988L-1676.95 -92L243.05 -92L243.05 988Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.098;fill: #000000 } 
+	</style>
+	<g id="Home Scene" clip-path="url(#cp1)">
+		<g id="Log In Button">
+			<path id="Layer 331" class="shp0" d="M47.77 94.08C9.27 94.08 0.7 77.25 0.7 47C0.7 16.76 14.43 -0.08 47.77 -0.08C81.11 -0.08 94.85 17.42 94.85 47C94.85 76.58 86.27 94.08 47.77 94.08Z" />
+		</g>
+	</g>
+</svg>

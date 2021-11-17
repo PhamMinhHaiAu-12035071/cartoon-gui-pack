@@ -1,5 +1,6 @@
 import { CircleButtonSvg, IconWhiteSvg } from '../../types/shared-typed'
 import * as Phaser from 'phaser'
+import { getScaleBasedOnImage } from '../../utils'
 
 export interface ICircleButton {
   game: Phaser.Game
@@ -44,31 +45,12 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     return this._circle
   }
 
-  private _getScaleBasedOnImage(
-    obj: Phaser.GameObjects.Image,
-    target: Phaser.GameObjects.Image,
-    scaleComparedToCircle: number = 1
-  ): { x: number; y: number } {
-    const widthTarget: number = target.width * this._circle.scaleX
-    const heightTarget: number = target.height * this._circle.scaleY
-    const widthObj: number = obj.width * obj.scaleX
-    const heightObj: number = obj.height * obj.scaleY
-    const widthExpectedObj: number = widthTarget * scaleComparedToCircle
-    const heightExpectedObj: number = heightTarget * scaleComparedToCircle
-    const xScaleExpectedObj: number = widthExpectedObj / widthObj
-    const yScaleExpectedObj: number = heightExpectedObj / heightObj
-    return {
-      x: xScaleExpectedObj,
-      y: yScaleExpectedObj
-    }
-  }
-
   private _setShadowCircleWrapper(): Phaser.GameObjects.Image {
     const OFFSET: number = 0.05
     const offsetX: number = this._circle.width * this._circle.scaleX * OFFSET
     const offsetY: number = this._circle.height * this._circle.scaleY * OFFSET
     this._shadowCircle = this._scene.add.image(-offsetX, offsetY, CircleButtonSvg.SHADOW)
-    const { x, y } = this._getScaleBasedOnImage(this._shadowCircle, this._circle)
+    const { x, y } = getScaleBasedOnImage(this._shadowCircle, this._circle)
     this._shadowCircle.setScale(x, y)
     this.add(this._shadowCircle)
     return this._shadowCircle
@@ -100,7 +82,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     }
     this._borderCircle = this._scene.add.image(0, 0, texture)
     this._componentBorderCircle = this._scene.add.container(this._borderCircle.x, this._borderCircle.y)
-    const { x, y } = this._getScaleBasedOnImage(this._borderCircle, this._circle, scaleComparedToCircle)
+    const { x, y } = getScaleBasedOnImage(this._borderCircle, this._circle, scaleComparedToCircle)
     this._borderCircle.setScale(x, y)
     this._borderCircle.setOrigin(0.5, 0)
     const offsetX: number =
@@ -116,7 +98,7 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
   private _setShadowBorderCircle(scaleComparedToCircle: number): Phaser.GameObjects.Image {
     const OFFSET: number = 0.14
     this._shadowBorderCircle = this._scene.add.image(0, 0, CircleButtonSvg.SHADOW_BORDER)
-    const { x, y } = this._getScaleBasedOnImage(this._shadowBorderCircle, this._circle, scaleComparedToCircle)
+    const { x, y } = getScaleBasedOnImage(this._shadowBorderCircle, this._circle, scaleComparedToCircle)
     this._shadowBorderCircle.setScale(x, y)
     this._shadowBorderCircle.setOrigin(0.5, 0)
     const offsetX: number =

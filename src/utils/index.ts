@@ -65,3 +65,22 @@ export const isICircleButton = (data: any): data is ICircleButton =>
   data.hasOwnProperty('y') &&
   data.hasOwnProperty('circleButton') &&
   data.hasOwnProperty('icon')
+
+export const getScaleBasedOnImage = (
+  obj: Phaser.GameObjects.Image,
+  target: Phaser.GameObjects.Image,
+  scaleComparedToCircle: number = 1
+): { x: number; y: number } => {
+  const widthTarget: number = target.width * target.scaleX
+  const heightTarget: number = target.height * target.scaleY
+  const widthObj: number = obj.width * obj.scaleX
+  const heightObj: number = obj.height * obj.scaleY
+  const widthExpectedObj: number = widthTarget * scaleComparedToCircle
+  const heightExpectedObj: number = heightTarget * scaleComparedToCircle
+  const xScaleExpectedObj: number = widthExpectedObj / widthObj
+  const yScaleExpectedObj: number = heightExpectedObj / heightObj
+  return {
+    x: xScaleExpectedObj,
+    y: yScaleExpectedObj
+  }
+}

@@ -1,4 +1,4 @@
-import { CircleButtonSvg, HomeSceneImage, IconWhiteSvg, SquareButton } from '../../types/shared-typed'
+import { CircleButtonSvg, HomeSceneImage, IconWhiteSvg, SquareButtonSvg } from '../../types/shared-typed'
 import Phaser from 'phaser'
 import ListCircleButtonComponent from '../components/listCircleButtonComponent'
 import SquareButtonComponent from '../components/squareButtonComponent'
@@ -77,7 +77,7 @@ export default class MainScene extends Phaser.Scene {
 
   private _createListSquareButton() {
     const square = new SquareButtonComponent(this, 200, 300)
-    square.setSquareWrapper(SquareButton.GREEN, 0.35)
+    square.setSquareWrapper(SquareButtonSvg.GREEN, 0.35)
   }
 
   update(time: number, delta: number) {}
