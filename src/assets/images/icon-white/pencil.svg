@@ -1,12 +1,1 @@
-<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 230" width="230" height="230">
-	<title>Pencil</title>
-	<style>
-		tspan { white-space:pre }
-		.shp0 { fill: #ffffff } 
-	</style>
-	<g id="Pencil">
-		<path id="Layer 2" class="shp0" d="M132.72 155.57L74.43 97.28L157.82 6.81C165.86 -1.23 178.93 -1.23 186.97 6.81L223.19 43.03C231.23 51.07 231.23 64.14 223.19 72.18L132.72 155.57Z" />
-		<path id="Layer 3" class="shp0" d="M91.94 196.36L33.64 138.06L63.03 108.67L121.33 166.97L91.94 196.36Z" />
-		<path id="Layer 4" class="shp0" d="M22.25 149.46L80.54 207.75C80.54 207.75 39.75 220.71 14.54 228.73C10.78 229.92 6.66 228.92 3.87 226.13C1.08 223.34 0.08 219.22 1.27 215.46C9.29 190.25 22.25 149.46 22.25 149.46Z" />
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="230" baseProfile="tiny-ps" version="1.2" viewBox="0 0 230 230"><title>Pencil</title><style>.shp0{fill:#fff}</style><g id="Pencil"><path id="Layer 2" d="M132.72 155.57L74.43 97.28L157.82 6.81C165.86 -1.23 178.93 -1.23 186.97 6.81L223.19 43.03C231.23 51.07 231.23 64.14 223.19 72.18L132.72 155.57Z" class="shp0"/><path id="Layer 3" d="M91.94 196.36L33.64 138.06L63.03 108.67L121.33 166.97L91.94 196.36Z" class="shp0"/><path id="Layer 4" d="M22.25 149.46L80.54 207.75C80.54 207.75 39.75 220.71 14.54 228.73C10.78 229.92 6.66 228.92 3.87 226.13C1.08 223.34 0.08 219.22 1.27 215.46C9.29 190.25 22.25 149.46 22.25 149.46Z" class="shp0"/></g></svg>

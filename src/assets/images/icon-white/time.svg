@@ -1,12 +1,1 @@
-<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204 242" width="204" height="242">
-	<title>Time</title>
-	<style>
-		tspan { white-space:pre }
-		.shp0 { fill: #ffffff } 
-	</style>
-	<g id="Time">
-		<path id="Path" class="shp0" d="M82.46 21.58L121.54 21.58L121.54 54.27L82.46 54.27L82.46 21.58Z" />
-		<path id="Composite Path" fill-rule="evenodd" class="shp0" d="M82.92 77.87L117.45 77.87L112.9 143.24L168.34 141.43L167.43 167.76L87.46 165.94L82.92 77.87ZM0.22 139.61C0.22 195.78 45.79 241.3 102 241.3C158.21 241.3 203.78 195.78 203.78 139.61C203.78 83.45 158.21 37.92 102 37.92C45.79 37.92 0.22 83.45 0.22 139.61Z" />
-		<path id="Path" class="shp0" d="M49.75 0.7L154.25 0.7L154.25 27.94L49.75 27.94L49.75 0.7Z" />
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="204" height="242" baseProfile="tiny-ps" version="1.2" viewBox="0 0 204 242"><title>Time</title><style>.shp0{fill:#fff}</style><g id="Time"><path id="Path" d="M82.46 21.58L121.54 21.58L121.54 54.27L82.46 54.27L82.46 21.58Z" class="shp0"/><path id="Composite Path" fill-rule="evenodd" d="M82.92 77.87L117.45 77.87L112.9 143.24L168.34 141.43L167.43 167.76L87.46 165.94L82.92 77.87ZM0.22 139.61C0.22 195.78 45.79 241.3 102 241.3C158.21 241.3 203.78 195.78 203.78 139.61C203.78 83.45 158.21 37.92 102 37.92C45.79 37.92 0.22 83.45 0.22 139.61Z" class="shp0"/><path id="Path" d="M49.75 0.7L154.25 0.7L154.25 27.94L49.75 27.94L49.75 0.7Z" class="shp0"/></g></svg>
