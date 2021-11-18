@@ -1,10 +1,1 @@
-<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 242" width="210" height="242">
-	<title>Arrow Simple - Left</title>
-	<style>
-		tspan { white-space:pre }
-		.shp0 { fill: #ffffff } 
-	</style>
-	<g id="Arrow Simple - Left">
-		<path id="Path" class="shp0" d="M180.77 238.62C137.06 257.51 0.37 172.13 0.37 123.98C0.37 75.06 139.45 -6.42 173.52 1.2C215.71 10.63 224.48 219.73 180.77 238.62Z" />
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="242" baseProfile="tiny-ps" version="1.2" viewBox="0 0 210 242"><title>Arrow Simple - Left</title><style>.shp0{fill:#fff}</style><g id="Arrow Simple - Left"><path id="Path" d="M180.77 238.62C137.06 257.51 0.37 172.13 0.37 123.98C0.37 75.06 139.45 -6.42 173.52 1.2C215.71 10.63 224.48 219.73 180.77 238.62Z" class="shp0"/></g></svg>

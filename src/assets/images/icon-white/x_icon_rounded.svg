@@ -1,11 +1,1 @@
-<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226 226" width="226" height="226">
-	<title>X Icon - Rounded</title>
-	<style>
-		tspan { white-space:pre }
-		.shp0 { fill: #ffffff } 
-	</style>
-	<g id="X Icon - Rounded">
-		<path id="Layer 2" class="shp0" d="M56.06 216.25C43.28 229.03 22.53 229.03 9.75 216.25C-3.03 203.47 -3.03 182.72 9.75 169.94L169.94 9.75C182.72 -3.03 203.47 -3.03 216.25 9.75C229.03 22.53 229.03 43.28 216.25 56.06L56.06 216.25Z" />
-		<path id="Layer 3" class="shp0" d="M9.75 56.06C-3.03 43.28 -3.03 22.53 9.75 9.75C22.53 -3.03 43.28 -3.03 56.06 9.75L216.25 169.94C229.03 182.72 229.03 203.47 216.25 216.25C203.47 229.03 182.72 229.03 169.94 216.25L9.75 56.06Z" />
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="226" height="226" baseProfile="tiny-ps" version="1.2" viewBox="0 0 226 226"><title>X Icon - Rounded</title><style>.shp0{fill:#fff}</style><g id="X Icon - Rounded"><path id="Layer 2" d="M56.06 216.25C43.28 229.03 22.53 229.03 9.75 216.25C-3.03 203.47 -3.03 182.72 9.75 169.94L169.94 9.75C182.72 -3.03 203.47 -3.03 216.25 9.75C229.03 22.53 229.03 43.28 216.25 56.06L56.06 216.25Z" class="shp0"/><path id="Layer 3" d="M9.75 56.06C-3.03 43.28 -3.03 22.53 9.75 9.75C22.53 -3.03 43.28 -3.03 56.06 9.75L216.25 169.94C229.03 182.72 229.03 203.47 216.25 216.25C203.47 229.03 182.72 229.03 169.94 216.25L9.75 56.06Z" class="shp0"/></g></svg>
