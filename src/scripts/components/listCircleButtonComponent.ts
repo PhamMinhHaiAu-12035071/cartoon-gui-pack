@@ -2,7 +2,8 @@ import CircleButtonComponent, { ICircleButton } from './circleButtonComponent'
 import { getSize, isICircleButton } from '../../utils'
 
 export default class ListCircleButtonComponent extends Phaser.GameObjects.Group {
-  public static readonly RADIUS_ORIGINAL_CIRCLE = 256
+  public static readonly RADIUS_ORIGINAL_CIRCLE: number = 256
+
   private readonly _scene: Phaser.Scene
   constructor(
     scene: Phaser.Scene,

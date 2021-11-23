@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import { ICircleButton } from '../scripts/components/circleButtonComponent'
+import { ISquareButton } from '../scripts/components/squareButtonComponent'
 
 export const getSize = (con: Phaser.GameObjects.Container, game: Phaser.Game): { w: number; h: number } => {
   //set the top position to the bottom of the game
@@ -64,6 +65,12 @@ export const isICircleButton = (data: any): data is ICircleButton =>
   data.hasOwnProperty('x') &&
   data.hasOwnProperty('y') &&
   data.hasOwnProperty('circleButton') &&
+  data.hasOwnProperty('icon')
+
+export const isSquareButton = (data: any): data is ISquareButton =>
+  data.hasOwnProperty('x') &&
+  data.hasOwnProperty('y') &&
+  data.hasOwnProperty('squareButton') &&
   data.hasOwnProperty('icon')
 
 export const getScaleBasedOnImage = (

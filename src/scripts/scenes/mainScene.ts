@@ -1,11 +1,12 @@
 import { CircleButtonSvg, HomeSceneImage, IconWhiteSvg, SquareButtonSvg } from '../../types/shared-typed'
 import Phaser from 'phaser'
 import ListCircleButtonComponent from '../components/listCircleButtonComponent'
-import SquareButtonComponent from '../components/squareButtonComponent'
+import ListSquareButtonComponent from '../components/listSquareButtonComponent'
 
 export default class MainScene extends Phaser.Scene {
   private _backgroundGameImage: Phaser.GameObjects.Image
   private _listCircleButtonComponent: ListCircleButtonComponent
+  private _listSquareButtonComponent: ListSquareButtonComponent
 
   constructor() {
     super({ key: 'MainScene' })
@@ -32,7 +33,7 @@ export default class MainScene extends Phaser.Scene {
   private _createListCircleButton() {
     const OFFSET_TOP_VERTICAL: number = this.cameras.main.height * 0.78
     const OFFSET_BOTTOM_VERTICAL: number = this.cameras.main.height * 0.88
-    const SCALE: number = 0.35
+    const SCALE: number = 0.4
     const sizeCircleButton: number = ListCircleButtonComponent.RADIUS_ORIGINAL_CIRCLE * SCALE
     this._listCircleButtonComponent = new ListCircleButtonComponent(this)
     this._listCircleButtonComponent.add([
@@ -76,8 +77,20 @@ export default class MainScene extends Phaser.Scene {
   }
 
   private _createListSquareButton() {
-    const square = new SquareButtonComponent(this, 200, 300)
-    square.setSquareWrapper(SquareButtonSvg.GREEN, 0.35)
+    const OFFSET: number = 100
+    const OFFSET_BOTTOM_VERTICAL: number = 100
+    const SCALE: number = 0.25
+    const sizeSquareButton: number = ListSquareButtonComponent.SIZE * SCALE
+    this._listSquareButtonComponent = new ListSquareButtonComponent(this)
+    this._listSquareButtonComponent.add([
+      {
+        x: 200,
+        y: 200,
+        squareButton: SquareButtonSvg.VIOLET,
+        scaleSquareButton: SCALE,
+        icon: IconWhiteSvg.USER_PLUS
+      }
+    ])
   }
 
   update(time: number, delta: number) {}

@@ -6,14 +6,16 @@ const DEFAULT_WIDTH = window.innerWidth
 const DEFAULT_HEIGHT = window.innerHeight
 
 const config = {
-  type: Phaser.AUTO,
+  type: Phaser.CANVAS,
   backgroundColor: '#ffffff',
+  pixelArt: true,
   scale: {
     parent: 'phaser-game',
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
     width: DEFAULT_WIDTH,
-    height: DEFAULT_HEIGHT
+    height: DEFAULT_HEIGHT,
+    resolution: window.devicePixelRatio
   },
   scene: [PreScene, MainScene],
   physics: {

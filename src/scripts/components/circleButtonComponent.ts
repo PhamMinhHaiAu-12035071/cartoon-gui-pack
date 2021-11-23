@@ -60,16 +60,9 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     if (!this._circle) {
       throw new Error('please provide circle image wrapper')
     }
-    const widthCircle: number = this._circle.width * this._circle.scaleX
-    const heightCircle: number = this._circle.height * this._circle.scaleY
     this._icon = this._scene.add.image(0, 0, texture)
-    const widthIcon: number = this._icon.width * this._icon.scaleX
-    const heightIcon: number = this._icon.height * this._icon.scaleY
-    const widthExpectIcon: number = widthCircle * scaleComparedToCircle
-    const heightExpectIcon: number = heightCircle * scaleComparedToCircle
-    const xScaleExpectedIcon: number = widthExpectIcon / widthIcon
-    const yScaleExpectedIcon: number = heightExpectIcon / heightIcon
-    this._icon.setScale(Math.min(xScaleExpectedIcon, yScaleExpectedIcon))
+    const { x, y } = getScaleBasedOnImage(this._icon, this._circle, scaleComparedToCircle)
+    this._icon.setScale(Math.min(x, y))
     // default set origin
     this._icon.setOrigin(0.5, 0.5)
     this.add(this._icon)
@@ -122,7 +115,6 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
     const style = { font: `${FONT_SIZE}px LilitaOne`, fill: '#ffffff', boundsAlignH: 'center', boundsAlignV: 'middle' }
     this._textBadge = this._scene.add.text(0, 0, badge.toString(), style)
     this._textBadge.setOrigin(0.5, 0.5)
-    this._textBadge.setResolution(2)
     const offsetX: number =
       this._circle.width * this._circle.scaleX * 0.5 - this._borderCircle.width * this._borderCircle.scaleX * 0.2
     const offsetY: number = this._borderCircle.height * this._borderCircle.scaleY * 0.5

@@ -101,7 +101,6 @@ export enum IconWhiteSvg {
 }
 
 export enum SquareButtonSvg {
-  BLUE = 'blue-square-button',
   BLUE_TEAL = 'blue-teal-square-button',
   BORDEAUX = 'bordeaux-square-button',
   BROWN = 'brown-square-button',

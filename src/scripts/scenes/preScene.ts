@@ -104,7 +104,6 @@ export default class PreScene extends Phaser.Scene {
     this.load.svg(IconWhiteSvg.X_ICON_ROUNDED, 'assets/images/icon-white/x_icon_rounded.svg')
     this.load.svg(IconWhiteSvg.YOUTUBE, 'assets/images/icon-white/youtube.svg')
     // load square button
-    this.load.svg(SquareButtonSvg.BLUE, 'assets/images/buttons/squares/blue.svg')
     this.load.svg(SquareButtonSvg.BLUE_TEAL, 'assets/images/buttons/squares/blue_teal.svg')
     this.load.svg(SquareButtonSvg.BORDEAUX, 'assets/images/buttons/squares/bordeaux.svg')
     this.load.svg(SquareButtonSvg.BROWN, 'assets/images/buttons/squares/brown.svg')
@@ -119,7 +118,7 @@ export default class PreScene extends Phaser.Scene {
     this.load.svg(SquareButtonSvg.PURPLE, 'assets/images/buttons/squares/purple.svg')
     this.load.svg(SquareButtonSvg.RED, 'assets/images/buttons/squares/red.svg')
     this.load.svg(SquareButtonSvg.TEAL, 'assets/images/buttons/squares/teal.svg')
-    this.load.svg(SquareButtonSvg.VIOLET, 'assets/images/buttons/squares/violet.svg')
+    this.load.image(SquareButtonSvg.VIOLET, 'assets/images/buttons/squares/violet.svg')
     this.load.svg(SquareButtonSvg.YELLOW, 'assets/images/buttons/squares/yellow.svg')
     this.load.svg(SquareButtonSvg.SHADOW, 'assets/images/buttons/squares/shadow.svg')
   }
