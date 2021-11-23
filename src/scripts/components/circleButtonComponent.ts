@@ -112,8 +112,11 @@ export default class CircleButtonComponent extends Phaser.GameObjects.Container 
       ...[this._borderCircle.width * this._borderCircle.scaleX, this._borderCircle.height * this._borderCircle.scaleY]
     )
     const FONT_SIZE: number = minSizeBorderCircle * 0.5
-    const style = { font: `${FONT_SIZE}px LilitaOne`, fill: '#ffffff', boundsAlignH: 'center', boundsAlignV: 'middle' }
-    this._textBadge = this._scene.add.text(0, 0, badge.toString(), style)
+    this._textBadge = this._scene.add
+      .text(0, 0, badge.toString())
+      .setFontFamily('LilitaOne')
+      .setFontSize(FONT_SIZE)
+      .setColor('#ffffff')
     this._textBadge.setOrigin(0.5, 0.5)
     const offsetX: number =
       this._circle.width * this._circle.scaleX * 0.5 - this._borderCircle.width * this._borderCircle.scaleX * 0.2
